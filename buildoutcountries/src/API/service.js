@@ -1,6 +1,9 @@
 import axios from 'axios';
 
+
+
 export const getCountryFlag=async()=>{
+   
     try{
     const response=await axios.get(`https://restcountries.com/v3.1/all`)
 
@@ -8,7 +11,8 @@ export const getCountryFlag=async()=>{
     }
     catch(e)
     {
-        console.log(e);
+        console.error('Error fetching data:', e.message);
+        
     }
 }
 //https://xbuild-out-countries.vercel.app/
